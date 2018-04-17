@@ -1,0 +1,117 @@
+.tudo {
+    max-width: 1366px;
+    margin: auto;
+    display: grid;
+    justify-content: space-around;
+    // grid-column-gap: 15px;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 0 100% 0%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        grid-template-columns: 40% 60%;
+    }
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 30% 40% 30%;   
+    }
+    .esquerda {
+        @media screen and (max-width: 767px) {
+            visibility: hidden;
+        }
+        margin-top: 15px;
+    }
+    .centro {
+        margin-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .direita {
+        display: block;
+    }
+}
+
+body, html, h1, h2, h3, h4, h5, h6, p, span, ul, li, textarea, div {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #8D6E63;
+}
+
+.sucesso {
+    // display: none;
+    margin-top: 15px;
+    background-color: #E8F5E9;
+    border: 1px solid #4CAF50;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Roboto', "Helvetica Neue", sans-serif;
+    &__destaque {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.erro {
+    // display: none;
+    margin-top: 15px;
+    background-color: #FFEBEE;
+    border: 1px solid #F44336;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
+
+
+.botao {
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    border: none;
+    background-color: #4E342E;
+    color: white;
+    border-radius: 2px;
+    height: 36px;
+    font-size: 14px;
+}
+
+a.botao {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    padding: 10px 16px;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #8D6E63;
+    border-radius: 2px;
+    padding: 10px 16px;
+}
+
+.deletar {
+    color: #F44336;
+    border: 1px solid #F44336;
+    background-color: transparent;
+    
+}
+
+.editar {
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    background-color: transparent;
+}
+
+.invisible {
+    background-color: transparent;
+    color: black;
+}
+
+.escondido {
+    display: none;
+}

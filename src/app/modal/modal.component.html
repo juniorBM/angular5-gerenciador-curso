@@ -1,0 +1,17 @@
+<div class="modal">
+</div>
+<div class="modal-conteudo" id="mod_{{ idDeleta }}">
+  <div class="modal-conteudo__cabecalho">
+    {{ titulo }}
+  </div>
+  <div class="modal-conteudo__corpo">
+    {{ textoCorpo }}
+  </div>
+  <div class="modal-conteudo__rodape">
+    <div>
+      <button (click)="fecharModal()" class="botao invisible">Não</button>
+      <button (click)="executar()" class="botao">Sim</button>
+      <a id="link-atualizar" class="escondido" routerLink="{{ rotaFront }}">Sim</a>
+    </div>
+  </div>
+</div>
