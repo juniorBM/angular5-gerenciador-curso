@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { CursoService } from './../domain/curso/curso.service';
 import { ModalComponent } from './../modal/modal.component';
+import { Retorno } from '../domain/retorno/retorno';
 @Component({
   selector: 'app-listar-curso',
   templateUrl: './listar-curso.component.html',
@@ -31,7 +32,7 @@ export class ListarCursoComponent implements OnInit {
 
   listarCurso() {
     this.cursoService.listarCurso()
-      .then((data: any[]) => {
+      .then((data: any) => {
         this.cursos = data.retorno;
       });
   }

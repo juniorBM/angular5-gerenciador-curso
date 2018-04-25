@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+
+import { AlunoService } from './domain/aluno/aluno.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CursoService } from './domain/curso/curso.service';
@@ -26,12 +28,13 @@ import { AlunoDetalheComponent } from './aluno/aluno-detalhe/aluno-detalhe.compo
     AlunoDetalheComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule
   ],
   providers: [
+    AlunoService,
     CursoService,
     GlobalService
   ],

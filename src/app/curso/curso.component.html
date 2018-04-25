@@ -2,7 +2,7 @@
   <h1>Cadastre seu curso no gerenciador de cursos!</h1>
   <h3>Totalmente gratuito!</h3>
     <form  (ngSubmit)="submeter()" #cursoForm="ngForm" class="registro-usuario__form">
-        <input disabled *ngIf="curso.id" type="number" name="id" [(ngModel)]="curso.id" value="{{ curso.id }}">
+      <input disabled *ngIf="curso.id" type="number" name="id" [(ngModel)]="curso.id" value="{{ curso.id }}">
       <input required #nome="ngModel" name="nome" [(ngModel)]="curso.nome" type="text" placeholder="Nome do curso" value="{{ curso.nome }}">
       <textarea required #descricao="ngModel" name="descricao" [(ngModel)]="curso.descricao" rows="5" placeholder="Descrição do curso" value="{{ curso.descricao }}"></textarea>
       <div class="registro-usuario__form__button">
@@ -13,6 +13,6 @@
       O curso <span class="sucesso__destaque">{{ curso.nome }}</span> foi cadastrado com sucesso!
     </div>
     <div *ngIf="erro" class="erro">
-      O curso <span class="sucesso__destaque">{{ curso.nome }}</span> não foi cadastrado com sucesso!
+      O curso <span class="erro__destaque">{{ curso.nome }}</span> não foi cadastrado com sucesso!
     </div>
 </div>

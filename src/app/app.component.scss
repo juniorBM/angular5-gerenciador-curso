@@ -47,10 +47,6 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 15px;
     font-family: 'Roboto', "Helvetica Neue", sans-serif;
-    &__destaque {
-        text-transform: uppercase;
-        font-weight: bold;
-    }
 }
 
 .erro {
@@ -61,6 +57,13 @@ h1, h2, h3, h4, h5 {
     text-align: center;
     padding: 15px;
     font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
+
+.sucesso, .erro {
+    &__destaque {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 }
 
 
@@ -114,4 +117,74 @@ a {
 
 .escondido {
     display: none;
+}
+
+input {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #DEDEDE;
+    &:active {
+        border: 1px solid black;
+    }
+}
+textarea {
+    @extend input;
+    resize: none;
+}
+
+select {
+    @extend input;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+label.radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    .radio-selecionado {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #D7CCC8;
+        border-radius: 100%;
+        &::after {
+            top: 8px;
+            left: 8.4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background: white;
+        }
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .radio-selecionado {
+            background-color: #BCAAA4;
+            &.radio-selecionado::after {
+                display: block;
+            }
+        }
+    }
+}
+.radio-selecionado::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
 }

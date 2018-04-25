@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Curso } from './curso';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Retorno } from '../retorno/retorno';
 
 @Injectable()
 export class CursoService {
