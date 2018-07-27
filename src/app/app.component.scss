@@ -1,0 +1,47 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.tudo {
+  max-width: 1366px;
+  margin: auto;
+  display: grid;
+  justify-content: space-around;
+  // grid-column-gap: 15px;
+  @media screen and (max-width: 767px) {
+      grid-template-columns: 0 100% 0%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+      grid-template-columns: 40% 60%;
+  }
+  @media screen and (min-width: 1024px) {
+      grid-template-columns: 30% 40% 30%;
+  }
+  .esquerda {
+      @media screen and (max-width: 767px) {
+          visibility: hidden;
+      }
+      margin-top: 15px;
+  }
+  .centro {
+      margin-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  .direita {
+      display: block;
+  }
+}
+
+body, html, h1, h2, h3, h4, h5, h6, p, span, ul, li, textarea, div {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
+
+.input {
+  width: 100%;
+}
+
+.el-center {
+  text-align: center;
+}

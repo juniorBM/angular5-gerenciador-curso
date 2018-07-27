@@ -1,0 +1,24 @@
+<h1 class="el-center">Registre para ter surpresas surpreendentes</h1>
+<form (ngSubmit)="registerUser()" #userForm="ngForm">
+  <mat-form-field class="input">
+    <input required matInput placeholder="Nome" value="{{ user.name }}" [(ngModel)]="user.name" name="name">
+  </mat-form-field>
+  <mat-form-field class="input">
+    <input required matInput placeholder="Sobrenome" value="{{ user.lastname }}" [(ngModel)]="user.lastname" name="lastname">
+  </mat-form-field>
+  <mat-form-field class="input">
+    <input required minlength="6" #password matInput placeholder="Senha" type="password" value="{{ user.password }}" [(ngModel)]="user.password"
+      name="password">
+    <mat-hint align="start">
+      <strong>Minimo 6 caracters</strong>
+    </mat-hint>
+    <mat-hint align="end">{{ password.value.length }} / 6</mat-hint>
+  </mat-form-field>
+  <mat-form-field class="input">
+    <input required matInput placeholder="Email" type="email" value="{{ user.email }}" [(ngModel)]="user.email" name="email">
+    <mat-hint align="start">{{ errorEmail }}</mat-hint>
+  </mat-form-field>
+  <div class="el-center">
+    <button mat-raised-button color="primary" [disabled]="!userForm.form.valid">Se Inscrever</button>
+  </div>
+</form>
