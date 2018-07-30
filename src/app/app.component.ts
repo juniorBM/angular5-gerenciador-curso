@@ -29,7 +29,7 @@ export class AppComponent {
       if (this.user && this.user.api_token) {
         this.checkToken(this.user.api_token);
       } else {
-        this.router.navigate(['/'])
+        this.router.navigate(['/']);
       }
     } else {
       this.router.navigate(['/'])

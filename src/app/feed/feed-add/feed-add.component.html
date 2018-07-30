@@ -1,19 +1,20 @@
-<h1 class="el-center">Poste seu meme</h1>
-<form #feedForm="ngForm">
+<h1 class="el-center">Poste seu lixo</h1>
+<form (ngSubmit)="addFeed()" #feedForm="ngForm">
   <mat-form-field class="input">
-    <input maxlength="191" required #title matInput placeholder="Título" value="" name="title">
+    <input maxlength="191" required #title matInput placeholder="Título" value="{{ feed.title }}" [(ngModel)]="feed.title" name="title">
     <mat-hint align="start">
       <strong>Máximo 191 caracters</strong>
     </mat-hint>
     <mat-hint align="end">{{ title.value.length }} / 191</mat-hint>
   </mat-form-field>
-  <div class="image-post">
+  <div class="image-post" (click)="uploadImage()">
+      <img [src]="feed.image_post" alt="">
     <svg viewBox="0 0 24 24">
       <path d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
   </svg>
   </div>
-  <input class="el-hide" type="file" name="image_post" id="image_post">
+  <input class="el-hide" type="file" name="image_post" id="image_post" (change)="selectPhoto($event)">
   <div class="el-center">
-    <button mat-raised-button color="primary" [disabled]="">Adicionar</button>
+    <button mat-raised-button color="primary" [disabled]="">Aterrar</button>
   </div>
 </form>

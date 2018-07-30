@@ -14,6 +14,7 @@ import { UserService } from './user/service/user.service';
 import { RootService } from './root.service';
 import { FeedListComponent } from './feed/feed-list/feed-list.component';
 import { FeedAddComponent } from './feed/feed-add/feed-add.component';
+import { FeedService } from './feed/service/feed-service.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FeedAddComponent } from './feed/feed-add/feed-add.component';
   ],
   providers: [
     UserService,
+    FeedService,
     RootService
   ],
   bootstrap: [AppComponent]
