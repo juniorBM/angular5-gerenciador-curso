@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { UserService } from '../service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-user',
@@ -12,7 +13,8 @@ export class RegisterUserComponent implements OnInit {
   private user: User;
   private errorEmail: String = '';
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {
     this.user = new User();
   }
@@ -23,10 +25,9 @@ export class RegisterUserComponent implements OnInit {
   registerUser(): void {
     this.userService.registerUser(this.user)
       .then((data: any) => {
-        localStorage.setItem("userName", data.result.name);
-        localStorage.setItem("userLastname", data.result.lastname);
-        localStorage.setItem("userapiToken", data.result.api_token);
-        localStorage.setItem("userEmail", data.result.email);
+        let user = JSON.stringify(data.result);
+        localStorage.setItem('user', user);
+        this.router.navigate(['/feed-list']);
       }).catch((err: any) => {
         if (err.error.email) {
           this.errorEmail = err.error.email[0];

@@ -12,8 +12,6 @@ export class RootService {
 
   checkToken(api_token: String) {
     this.headers = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
-    console.log(api_token);
-
     return new Promise((resolve, reject) => {
       this.http.post(this.apiUrl + 'user/checktoken', JSON.stringify({api_token: api_token}), this.headers)
         .subscribe((result: any) => {

@@ -3,8 +3,14 @@
   <div class="esquerda">
   </div>
   <div class="centro">
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
   </div>
   <div class="direita">
   </div>
 </div>
+<footer class="footer">
+
+  <a *ngIf="user" class="bt-fab" color="warn" mat-fab routerLink="/feed-add">
+    <mat-icon svgIcon="plus"></mat-icon>
+  </a>
+</footer>

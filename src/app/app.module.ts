@@ -8,16 +8,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user/service/user.service';
-import { ListComponent } from './feed/list/list.component';
 import { RootService } from './root.service';
+import { FeedListComponent } from './feed/feed-list/feed-list.component';
+import { FeedAddComponent } from './feed/feed-add/feed-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterUserComponent,
-    ListComponent
+    FeedListComponent,
+    FeedAddComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -26,7 +29,8 @@ import { RootService } from './root.service';
     FormsModule,
     MatToolbarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
     UserService,
