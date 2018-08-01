@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './user/service/user.service';
 import { RootService } from './root.service';
@@ -31,7 +32,8 @@ import { FeedService } from './feed/service/feed-service.service';
     MatToolbarModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [
     UserService,

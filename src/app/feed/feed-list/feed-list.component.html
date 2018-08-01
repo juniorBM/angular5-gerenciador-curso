@@ -1,6 +1,22 @@
-<p>
-  feed-list works!
-</p>
+<mat-card *ngFor="let feed of feeds" class="card-feed">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ feed.user.name }}</mat-card-title>
+    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+  </mat-card-header>
+  <!-- <div class="box-image"> -->
+    <img class="box-image__image-post" mat-card-image [src]="transform(feed.image_post)" alt="Photo of a Shiba Inu">
+  <!-- </div> -->
+  <mat-card-content>
+    <p>
+      {{ feed.title }}
+    </p>
+  </mat-card-content>
+  <!-- <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions> -->
+</mat-card>
 <a class="bt-fab" color="warn" mat-fab routerLink="/feed-add">
   <mat-icon svgIcon="plus"></mat-icon>
 </a>

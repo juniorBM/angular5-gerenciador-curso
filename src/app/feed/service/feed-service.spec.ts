@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { FeedService } from './feed-service';
+import { FeedService } from './feed-service.service';
 
 describe('FeedService', () => {
   beforeEach(() => {

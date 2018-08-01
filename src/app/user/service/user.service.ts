@@ -7,7 +7,8 @@ import { User } from '../user';
 })
 export class UserService {
 
-  private apiUrl: String = 'http://127.0.0.1:8030/';
+  // private apiUrl: String = 'http://127.0.0.1:8030/';
+  private apiUrl: String = 'http://192.168.0.183:8030/';
   private headers;
 
   constructor(
